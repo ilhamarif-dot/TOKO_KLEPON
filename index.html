@@ -1,1 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Klepon</title>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8e7;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #1b5e20;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        /* BERANDA */
+        .home {
+            text-align: center;
+            padding: 70px 20px;
+            background: #dcedc8;
+        }
+
+        .home h2 {
+            color: #1b5e20;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .home p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* BUTTON */
+        button {
+            background: #2e7d32;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #1b5e20;
+        }
+
+        /* PRODUK */
+        .produk-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .produk-section h2 {
+            color: #2e7d32;
+            margin-bottom: 30px;
+        }
+
+        .produk {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            width: 240px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #ccc;
+        }
+
+        .klepon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #f1f8e9;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .contact h2 {
+            color: #2e7d32;
+            margin-bottom: 25px;
+        }
+
+        .contact p {
+            margin: 12px;
+            font-size: 17px;
+        }
+
+        .wa {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .wa:hover {
+            background: #128C7E;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* HP */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .home h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🍡 TOKO KLEPON 🍡</h1>
+        <p>Klepon Enak, Lembut, dan Manis</p>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#produk">Produk</a>
+        <a href="#contact">CO</a>
+    </nav>
+
+    <!-- BERANDA -->
+    <section id="home" class="home">
+        <h2>Selamat Datang di Toko Klepon</h2>
+
+        <p>
+            Nikmati klepon tradisional dengan rasa yang
+            lezat dan harga bersahabat.
+        </p>
+
+        <button onclick="pesanSekarang()">
+            Pesan Sekarang
+        </button>
+    </section>
+
+    <!-- PRODUK -->
+    <section id="produk" class="produk-section">
+
+        <h2>🍡 PRODUK KAMI 🍡</h2>
+
+        <div class="produk">
+
+            <div class="card">
+                <div class="klepon">🟢</div>
+                <h3>Klepon Original</h3>
+                <p>Klepon isi gula merah dan kelapa.</p>
+                <b>Rp10.000 / Box</b>
+
+                <br>
+
+                <button onclick="pesan('Klepon Original')">
+                    Pesan
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="klepon">🟢</div>
+                <h3>Klepon Pandan</h3>
+                <p>Klepon pandan dengan aroma yang harum.</p>
+                <b>Rp12.000 / Box</b>
+
+                <br>
+
+                <button onclick="pesan('Klepon Pandan')">
+                    Pesan
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="klepon">🟢</div>
+                <h3>Klepon Premium</h3>
+                <p>Klepon lembut dengan bahan berkualitas.</p>
+                <b>Rp15.000 / Box</b>
+
+                <br>
+
+                <button onclick="pesan('Klepon Premium')">
+                    Pesan
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT / CO -->
+    <section id="contact" class="contact">
+
+        <h2>📞 CO / CONTACT US</h2>
+
+        <p>
+            📱 <b>No. WhatsApp:</b><br>
+            085742439163
+        </p>
+
+        <a
+            class="wa"
+            href="https://wa.me/6285742439163"
+            target="_blank">
+            💬 Chat WhatsApp
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Toko Klepon</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function bukaWhatsApp() {
+            let nomor = "6285742439163";
+
+            let pesan =
+                "Halo Toko Klepon, saya ingin bertanya tentang produk.";
+
+            let link =
+                "https://wa.me/" + nomor +
+                "?text=" + encodeURIComponent(pesan);
+
+            window.open(link, "_blank");
+        }
+
+        function pesan(namaProduk) {
+            let nomor = "6285742439163";
+
+            let pesan =
+                "Halo Toko Klepon, saya ingin memesan " +
+                namaProduk + ".";
+
+            let link =
+                "https://wa.me/" + nomor +
+                "?text=" + encodeURIComponent(pesan);
+
+            window.open(link, "_blank");
+        }
+
+        function pesanSekarang() {
+            let nomor = "6285742439163";
+
+            let pesan =
+                "Halo Toko Klepon, saya ingin memesan klepon.";
+
+            let link =
+                "https://wa.me/" + nomor +
+                "?text=" + encodeURIComponent(pesan);
+
+            window.open(link, "_blank");
+        }
+
+    </script>
+
+</body>
+</html>
